@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import "./App.css";
+import react, { Component } from "react";
+import Counter from "./component/Counter"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    h: "aslam",
+    i: "muhammed",
+  };
+  render() {
+    return (
+      <div className="App">
+        <h1>Hai</h1>
+        <h2>
+          {this.state.h} {this.state.i}
+        </h2>
+        <Counter />
+      </div>
+    );
+  }
 }
 
 export default App;
